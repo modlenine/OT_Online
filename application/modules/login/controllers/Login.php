@@ -31,20 +31,6 @@ class Login extends MX_Controller{
   }
 
 
-  // public function verify_user()
-  // {
-  //   $data['verify_user'] = $this->login_model->getuser();
-
-  //   $this->load->view('template/tp_headcode');
-  //   get_contents('verify_user',$data);
-  //   get_footer();
-  // }
-
-  // public function save_verify_user()
-  // {
-  //   $this->login_model->save_verify_user();
-
-  // }
 
 
 }
