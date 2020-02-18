@@ -44,7 +44,7 @@
     <div class="container-fulid bg-white p-3">
 
         <div class="row">
-            <div class="col-md-2"></div>
+            <!-- <div class="col-md-2"></div> -->
             <div class="col-md-4">
                 <a href="#" class="btn btn-info p-3 mb-2 btn-block buttonEdit" data-toggle="modal" data-target="#create_ot">
                     <span>
@@ -56,8 +56,7 @@
                 </a>
             </div>
 
-            <div class="col-md-4">
-                <!-- <a href="javascript:popup('<?= base_url('main/createots') ?>','',1000,800)" class="btn btn-info p-3 mb-2 btn-block"> -->
+            <div class="col-md-4 checkPermisCreate">
                 <a href="#" data-toggle="modal" data-target="#choose_timename" class="btn btn-warning p-3 mb-2 btn-block buttonEdit">
                     <span>
                         <i class="la la-cart-plus"></i>
@@ -67,7 +66,7 @@
                     </span>
                 </a>
             </div>
-            <div class="col-md-2"></div>
+            <!-- <div class="col-md-2"></div> -->
         </div>
 
 

@@ -125,7 +125,7 @@ getModal();
                                 <input hidden type="text" name="checkDept" id="checkDept" value="<?= getUser()->DeptCode ?>">
 
                                 <!-- Check Position For use in jQuery ################################################-->
-                                <input hidden type="text" name="checkPosi" id="checkPosi" value="<?= getUser()->posi ?>">
+                                <input type="text" name="checkPosi" id="checkPosi" value="<?= getUser()->posi ?>">
 
 
                                 <div class="widget-content-left  ml-3 header-user-info">

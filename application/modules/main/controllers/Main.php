@@ -275,7 +275,9 @@ class Main extends MX_Controller
 		$ot_emptimename = $this->input->post('ot_timeName');
 		$ot_date_request = $this->input->post('ot_date_request');
 
-		$checkdata = checkDuplicate($otempcodes, $ot_emptimename, $ot_date_request);
+		$resultCondate = date('Y-m-d', strtotime($ot_date_request));
+
+		$checkdata = checkDuplicate($otempcodes, $ot_emptimename, $resultCondate);
 
 		echo $checkdata;
 	}
@@ -530,9 +532,7 @@ class Main extends MX_Controller
 
 	public function testcode()
 	{
-		$date = '14-02-2020';
-
-		echo date("Y-m-d" , strtotime($date));
+		echo checkDuplicate('M1809','กะเช้า','18-02-2020');
 	}
 
 

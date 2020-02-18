@@ -46,6 +46,7 @@ function save_ot(ot_date_request, ot_empFname, ot_empLname, ot_empCode, ot_empDe
         },
         success: function (data) {
             $('#ot_date_request').val('');
+            $('#ot_date_requestS').val('');
             $('#ot_timeName').val('');
 
             $('#alertEffect').fadeIn();

@@ -125,6 +125,15 @@ $(document).ready(function () {
 		});
 	}
 
+	// Check Permission Btn Create OT Group
+	var checkposi = $('#checkPosi').val();
+	$('.checkPermisCreate').css('display' , 'none');
+	if(checkposi != 15){
+		$('.checkPermisCreate').css('display' , '');
+	}else{
+		$('.checkPermisCreate').css('display' , 'none');
+	}
+
 
 
 
