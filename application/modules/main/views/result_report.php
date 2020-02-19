@@ -15,6 +15,7 @@
                 <th>วันที่อนุมัติ</th>
                 <th>ลงชื่อฝ่ายบุคคล</th>
                 <th>วันที่</th>
+                <th>หมายเหตุ</th>
             </tr>
         </thead>
 
@@ -77,6 +78,7 @@
                     <td>
                     <?= $getotlist['ot_hrnotice_datetime'] ?>
                     </td>
+                    <td><?= $getotlist['ot_hrnotice_memo'] ?></td>
                 </tr>
             <?php } ?>
         </tbody>
