@@ -178,8 +178,8 @@
       </div>
 
 
-
-      <table id="listrequestot" class="table table-striped table-bordered dt-responsive" style="width:100%">
+      <div class="table-responsive">
+      <table id="listrequestot" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
                 <th>รหัสพนักงาน</th>
@@ -214,8 +214,9 @@
             <?php } ?>
         </tbody>
     </table>
+    </div>
 
-      <div align="center">
+      <div align="center" class="mt-3">
         <input type="submit" name="insert" id="insert" class="btn btn-primary" value="บันทึกข้อมูล" />
       </div>
     </form>

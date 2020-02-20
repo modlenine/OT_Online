@@ -1,5 +1,5 @@
-<div class="">
-<table id="listot_group_detail" class="table table-striped table-bordered dt-responsive" style="width:100%">
+<div class="table-responsive">
+<table id="listot_group_detail" class="table table-striped table-bordered" style="width:100%">
                     <thead>
                         <tr>
                             <th >No.</th>

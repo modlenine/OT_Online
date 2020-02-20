@@ -142,11 +142,11 @@
 			<div class="modal-body">
 
 				<div class="row">
-					<div class="col-md-6">
+					<div class="col-md-6 form-group">
 						<a href="<?= base_url('main/openotgroupMorning') ?>">
 							<button class="btn btn-info p-3 btn-block" style="font-size:1.2rem">กะเช้า</button></a>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-6 form-group">
 						<a href="<?= base_url('main/openotgroupEvening') ?>">
 							<button class="btn btn-secondary p-3 btn-block" style="font-size:1.2rem">กะเย็น</button></a>
 					</div>

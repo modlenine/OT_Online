@@ -43,7 +43,7 @@
 
 
     <style>
-    /* thai */
+/* thai */
 @font-face {
   font-family: 'Sarabun';
   font-style: normal;
