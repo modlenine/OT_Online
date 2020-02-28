@@ -659,6 +659,7 @@ function getdatareport_bydept(dept, filterstatus, filtertime) {
 
 // Report by Dept
 function reportByDept(dept, filterstatus, filtertime) {
+    var datetimenow = $('#datetimenow').val();
     $.ajax({
         url: 'main/reportByDept',
         method: 'POST',
@@ -680,7 +681,15 @@ function reportByDept(dept, filterstatus, filtertime) {
                 ],
                 dom: 'Bfrtip',
                 buttons: [
-                    'copy', 'csv', 'excel', 'print'
+                    {
+                        extend: 'copyHtml5',
+                        title: 'Report OT Online By Department on '+datetimenow
+                    },
+                    {
+                        extend: 'excelHtml5',
+                        autoFilter: true,
+                        title: 'Report OT Online By Department on '+datetimenow
+                    }
                 ]
             });
 
@@ -715,7 +724,15 @@ function reportByDate(datestart, dateend, filterstatus, filtertime) {
                 ],
                 dom: 'Bfrtip',
                 buttons: [
-                    'copy', 'csv', 'excel', 'print'
+                    {
+                        extend: 'copyHtml5',
+                        title: 'Report OT Online By Department on '+datetimenow
+                    },
+                    {
+                        extend: 'excelHtml5',
+                        autoFilter: true,
+                        title: 'Report OT Online By Department on '+datetimenow
+                    }
                 ]
             });
         }

@@ -137,7 +137,7 @@
         <input hidden type="datetime" name="datetimenow" id="datetimenow" value="<?= date("d-m-Y H:i:s") ?>">
 
         <hr>
-        <div id="result_report"></div>
+        <div id="result_report" class="table-responsive"></div>
 
         <!-- <table id="example" class="table table-striped table-bordered dt-responsive" style="width:100%">
     <thead>

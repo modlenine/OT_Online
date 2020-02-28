@@ -1,21 +1,21 @@
-<div class="">
-    <table id="list_report" class="table table-striped table-bordered dt-responsive" style="width:100%">
+
+    <table id="list_report" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
-                <th>เลขที่คำขอ</th>
-                <th>ชื่อผู้ขอทำโอที</th>
-                <th>รหัส</th>
-                <th>ตำแหน่ง</th>
-                <th>ฝ่าย</th>
-                <th>กะงาน</th>
-                <th>วันที่ออกเอกสาร</th>
-                <th>วันที่ขอทำโอที</th>
-                <th>สถานะ</th>
-                <th>ผู้อนุมัติ</th>
-                <th>วันที่อนุมัติ</th>
-                <th>ลงชื่อฝ่ายบุคคล</th>
-                <th>วันที่</th>
-                <th>หมายเหตุ</th>
+                <th width="3%">เลขที่คำขอ</th>
+                <th width="10%">ชื่อผู้ขอทำโอที</th>
+                <th width="5%">รหัส</th>
+                <th width="5%">ตำแหน่ง</th>
+                <th width="5%">ฝ่าย</th>
+                <th width="5%">กะงาน</th>
+                <th width="10%">วันที่ออกเอกสาร</th>
+                <th width="15%">วันที่ขอทำโอที</th>
+                <th width="5%">สถานะ</th>
+                <th width="5%">ผู้อนุมัติ</th>
+                <th width="10%">วันที่อนุมัติ</th>
+                <th width="5%">ลงชื่อฝ่ายบุคคล</th>
+                <th width="10%">วันที่</th>
+                <th width="5%">หมายเหตุ</th>
             </tr>
         </thead>
 
@@ -83,7 +83,7 @@
             <?php } ?>
         </tbody>
     </table>
-</div>
+
 
 
 
