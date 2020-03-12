@@ -342,6 +342,8 @@ class Main extends MX_Controller
 			$dtot_user_date_approveshow_group = $this->input->post('dtot_user_date_approveshow_group');
 			$dtot_result_approve_group = $this->input->post('dtot_result_approve_group');
 			updateStatus($dtot_code_group, $dtot_userApprove_group, $dtot_user_date_approveshow_group, $dtot_result_approve_group);
+
+			$this->addot_model->emailApprove($dtot_code_group);
 		}
 	}
 

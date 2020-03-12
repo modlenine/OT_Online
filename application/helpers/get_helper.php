@@ -872,3 +872,11 @@ function getEmailSupUp($deptCode)
     ");
     return $query;
 }
+function getEmailHR()
+{
+    $obj = new getfn();
+    $query = $obj->getci()->db->query("SELECT
+    memberemail , posi FROM member WHERE DeptCode = '1005' AND resigned != 1
+    ");
+    return $query;
+}
