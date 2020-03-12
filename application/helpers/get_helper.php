@@ -837,3 +837,38 @@ function checkDuplicate($ot_empCode,$ot_timeName,$ot_date_request)
 
 
 
+// Get data To Email
+function getDataToEmail($otcode)
+{
+    $obj = new getfn();
+    $query = $obj->getci()->db->query("SELECT
+    ot_id , ot_code , ot_empFname , ot_empLname , ot_empCode , ot_empDeptCode , ot_empPosition , ot_timeName , 
+    ot_date_create , ot_date_request , ot_userApprove , ot_user_date_approve , ot_report_date , ot_report_month ,
+    ot_report_year , ot_status , ot_hrnotice_name , ot_hrnotice_datetime , ot_hrnotice_memo , otdept_name
+    FROM otonline_main a
+    INNER JOIN otonline_deptcat b ON a.ot_empDeptCode = b.otdept_code
+    WHERE ot_code = '$otcode'
+    ");
+    return $query->row();
+}
+function getDataToEmailGroup($otcode)
+{
+    $obj = new getfn();
+    $query = $obj->getci()->db->query("SELECT
+    ot_id , ot_code , ot_empFname , ot_empLname , ot_empCode , ot_empDeptCode , ot_empPosition , ot_timeName , 
+    ot_date_create , ot_date_request , ot_userApprove , ot_user_date_approve , ot_report_date , ot_report_month ,
+    ot_report_year , ot_status , ot_hrnotice_name , ot_hrnotice_datetime , ot_hrnotice_memo , otdept_name
+    FROM otonline_main a
+    INNER JOIN otonline_deptcat b ON a.ot_empDeptCode = b.otdept_code
+    WHERE ot_code = '$otcode'
+    ");
+    return $query;
+}
+function getEmailSupUp($deptCode)
+{
+    $obj = new getfn();
+    $query = $obj->getci()->db->query("SELECT
+    memberemail , posi FROM member WHERE DeptCode = '$deptCode' AND posi > 15 AND resigned != 1
+    ");
+    return $query;
+}
