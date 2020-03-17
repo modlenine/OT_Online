@@ -2,20 +2,20 @@
     <table id="list_report" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
-                <th width="3%">เลขที่คำขอ</th>
-                <th width="10%">ชื่อผู้ขอทำโอที</th>
-                <th width="5%">รหัส</th>
-                <th width="5%">ตำแหน่ง</th>
-                <th width="5%">ฝ่าย</th>
-                <th width="5%">กะงาน</th>
-                <th width="10%">วันที่ออกเอกสาร</th>
-                <th width="15%">วันที่ขอทำโอที</th>
-                <th width="5%">สถานะ</th>
-                <th width="5%">ผู้อนุมัติ</th>
-                <th width="10%">วันที่อนุมัติ</th>
-                <th width="5%">ลงชื่อฝ่ายบุคคล</th>
-                <th width="10%">วันที่</th>
-                <th width="5%">หมายเหตุ</th>
+                <th>เลขที่คำขอ</th>
+                <th>ชื่อผู้ขอทำโอที</th>
+                <th>รหัส</th>
+                <th>ตำแหน่ง</th>
+                <th>ฝ่าย</th>
+                <th>กะงาน</th>
+                <th>วันที่ออกเอกสาร</th>
+                <th>วันที่ขอทำโอที</th>
+                <th>สถานะ</th>
+                <th>ผู้อนุมัติ</th>
+                <th>วันที่อนุมัติ</th>
+                <th>ลงชื่อฝ่ายบุคคล</th>
+                <th>วันที่</th>
+                <th>หมายเหตุ</th>
             </tr>
         </thead>
 
@@ -33,6 +33,17 @@
                     $colorFont = ' style="color:#CD0000;" ';
                 } else if ($getotlist['ot_status'] == 'ฝ่ายบุคคลรับทราบ') {
                     $colorFont = ' style="color:#008B00;" ';
+                }
+
+
+                if($getotlist['ot_timeName'] == "กะเช้า(ก่อนเข้างาน)"){
+                    $ot_timename = "กะเช้า (ก่อนเข้างาน 06.00 - 07.15น.)";
+                }else if($getotlist['ot_timeName'] == "กะเช้า(หลังเลิกงาน)"){
+                    $ot_timename = "กะเช้า (หลังเลิกงาน 16.15 - 19.30น.)";
+                }else if($getotlist['ot_timeName'] == "กะเย็น(หลังเลิกงาน)") {
+                    $ot_timename = "กะเย็น (หลังเลิกงาน 04.15 - 07.30น.)";
+                }else{
+                    $ot_timename = "";
                 }
             ?>
                 <tr>
@@ -52,7 +63,7 @@
                         <?= $getotlist['otdept_name'] ?>
                     </td>
                     <td>
-                        <?= $getotlist['ot_timeName'] ?>
+                        <?= $ot_timename ?>
                     </td>
                     <td>
                         <?= conDateTime($getotlist['ot_date_create']) ?>

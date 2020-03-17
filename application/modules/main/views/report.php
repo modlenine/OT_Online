@@ -99,7 +99,7 @@
                     <option>กรุณาเลือกช่องทางการค้นหา</option>
                     <option value="searchByDate">ค้นจากวันที่ขอทำโอที</option>
                     <option value="searchByDept" <?= $disable ?>>ค้นหาจากแผนก</option>
-
+                    <option value="searchByName">ค้นหาจากชื่อ</option>
                 </select>
             </div>
 
@@ -130,6 +130,17 @@
                     }
                     ?>
                 </select>
+            </div>
+            
+
+
+            <!-- Section Search By Name -->
+            <div class="col-md-3 form-group namesearch" style="display:none">
+                <label>ค้นหาจากชื่อ</label>
+                <input type="text" name="report_nameStart" id="report_nameStart" class="form-control">
+            </div>
+            <div class="form-group namesearch" style="display:none">
+                <button type="button" name="btn_namesearch" id="btn_namesearch" class="mt-4 btn btn-success">ค้นหา</button>
             </div>
 
 

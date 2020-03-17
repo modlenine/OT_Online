@@ -114,16 +114,28 @@ $(document).ready(function () {
 			loaddata_list_groupHR(filterstatus, filtertimename);
 		});
 	} else {
-		loadlist(checkDept);
-		loaddata_list(checkDept, '');
-		loaddata_list_group(checkDept, '');
+		if(checkDept == 1014 || checkDept == 1015){
+			var checkDepts = '1014,1015';
+			loaddata_list_group(checkDepts, '');
+		}else{
+			loaddata_list_group(checkDept, '');
+		}
+		
 		$('input[name=filter_status] , input[name=filter_timename]').on('click', function () {
 			var filterstatus = $('#filter_status:checked').val();
 			var filtertimename = $('#filter_timename:checked').val();
 			// loaddata_list(checkDept, filterstatus, filtertimename);
-			loaddata_list_group(checkDept, filterstatus, filtertimename);
+			if(checkDept == 1014 || checkDept == 1015){
+				var checkDepts = '1014,1015';
+				loaddata_list_group(checkDepts, filterstatus, filtertimename);
+			}else{
+				loaddata_list_group(checkDept, filterstatus, filtertimename);
+			}
+			
 		});
 	}
+
+
 
 	// Check Permission Btn Create OT Group
 	var checkposi = $('#checkPosi').val();

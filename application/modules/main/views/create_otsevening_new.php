@@ -107,7 +107,12 @@
         <tbody>
           <?php
           $deptcode = getUser()->DeptCode;
-          $getEmpBydept = getEmployeeList($deptcode);
+          if($deptcode == 1014 || $deptcode == 1015){
+            $deptcode = '1014,1015';
+            $getEmpBydept = getEmployeeList($deptcode);
+          }else{
+            $getEmpBydept = getEmployeeList($deptcode);
+          }
           foreach ($getEmpBydept->result_array() as $rs) {
             if($rs['ot_active'] == 1){
               $checked = 'checked';
@@ -167,7 +172,7 @@
             <label>ฝ่าย</label>
             <select name="ot_empDeptCode" id="ot_empDeptCode" class="form-control">
               <?php
-              $query = $this->db->query("SELECT * FROM otonline_deptcat WHERE otdept_code = '$deptcode' ORDER BY otdept_name ASC");
+              $query = $this->db->query("SELECT * FROM otonline_deptcat WHERE otdept_code in ($deptcode) ORDER BY otdept_name ASC");
               foreach ($query->result_array() as $gdp) {
                 echo "<option value='" . $gdp['otdept_code'] . "'>" . $gdp['otdept_name'] . "</option>";
               }

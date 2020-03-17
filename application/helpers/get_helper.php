@@ -146,7 +146,7 @@ function getOtList_group($queryByDept, $filterstatus, $filtertimename)
     otonline_deptcat.otdept_name
     FROM otonline_main
     INNER JOIN otonline_deptcat on otonline_deptcat.otdept_code = otonline_main.ot_empDeptCode
-    WHERE ot_empDeptCode = '$queryByDept' and ot_status like '$filterstatus%' and ot_timeName like '%$filtertimename'
+    WHERE ot_empDeptCode in ($queryByDept) and ot_status like '$filterstatus%' and ot_timeName like '%$filtertimename'
     GROUP BY ot_code
     ORDER BY ot_id DESC LIMIT 500
     ");
@@ -702,7 +702,7 @@ function getEmployeeList($deptcode)
     deptlist.deptname
     from employee
     inner join deptlist on employee.DeptCode = deptlist.DeptCode
-    WHERE employee.DeptCode = '$deptcode' ");
+    WHERE employee.DeptCode in ($deptcode) ");
 }
 
 
@@ -815,7 +815,7 @@ function loadactiveot($deptcode)
     $query = $obj->getci()->db->query("SELECT * 
     FROM employee a
     inner join deptlist b on a.DeptCode = b.DeptCode
-    where ot_active = 1 and a.DeptCode = '$deptcode' ");
+    where ot_active = 1 and a.DeptCode in ($deptcode) ");
     return $query;
 }
 

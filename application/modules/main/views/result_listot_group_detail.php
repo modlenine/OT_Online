@@ -30,10 +30,12 @@
 				$colorFont = ' style="color:#008B00;" ';
 			}
 
-			if($getotlist['ot_timeName'] == "กะเช้า"){
-				$ot_timename = "กะเช้า (16.15 - 19.30น.)";
-			}else if($getotlist['ot_timeName'] == "กะเย็น"){
-				$ot_timename = "กะเย็น (04.15 - 07.30น.)";
+			if($getotlist['ot_timeName'] == "กะเช้า(ก่อนเข้างาน)"){
+				$ot_timename = "กะเช้า (ก่อนเข้างาน 06.00 - 07.15น.)";
+			}else if($getotlist['ot_timeName'] == "กะเช้า(หลังเลิกงาน)"){
+				$ot_timename = "กะเช้า (หลังเลิกงาน 16.15 - 19.30น.)";
+			}else if($getotlist['ot_timeName'] == "กะเย็น(หลังเลิกงาน)") {
+				$ot_timename = "กะเย็น (หลังเลิกงาน 04.15 - 07.30น.)";
 			}else{
 				$ot_timename = "";
 			}
