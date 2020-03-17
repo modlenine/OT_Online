@@ -579,6 +579,28 @@ $(document).ready(function () {
 	
 
 
+	// Check Empty filed
+	
+$('#user_approve_group').prop('disabled' , true);
+$('#dtot_result_approve_group').on('change' , function(){
+	if($(this).val() != ''){
+		$('#user_approve_group').prop('disabled' , false);
+	}else{
+		$('#user_approve_group').prop('disabled' , true);
+	}
+});
+
+
+
+
+
+
+	
+
+
+
+
+
 
 
 

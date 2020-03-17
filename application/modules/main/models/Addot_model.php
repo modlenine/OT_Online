@@ -104,7 +104,7 @@ class Addot_model extends CI_Model
         $mail->IsHTML(true);                                  // set email format to HTML
         $mail->Subject = $subject;
         $mail->Body = "<span style='font-family:Tahoma , sans-serif;line-height:25px;'>" . $body . "</span>";;
-        $mail->send();
+        // $mail->send();
         //************************************ZONE***SEND****EMAIL*************************************//
 
 
@@ -151,6 +151,7 @@ class Addot_model extends CI_Model
                 echo "</script>";
                 header("refresh:0; url=" . base_url('main/openotgroupMorning'));
                 $count++;
+                die();
             }
         }
 
@@ -238,7 +239,7 @@ class Addot_model extends CI_Model
         $mail->IsHTML(true);                                  // set email format to HTML
         $mail->Subject = $subject;
         $mail->Body = "<span style='font-family:Tahoma , sans-serif;line-height:25px;'>" . $body . "</span>";;
-        $mail->send();
+        // $mail->send();
         //************************************ZONE***SEND****EMAIL*************************************//
 
 
@@ -368,7 +369,7 @@ class Addot_model extends CI_Model
         $mail->IsHTML(true);                                  // set email format to HTML
         $mail->Subject = $subject;
         $mail->Body = "<span style='font-family:Tahoma , sans-serif;line-height:25px;'>" . $body . "</span>";;
-        $mail->send();
+        // $mail->send();
         //************************************ZONE***SEND****EMAIL*************************************//
 
 
@@ -437,7 +438,7 @@ class Addot_model extends CI_Model
         $mail->IsHTML(true);                                  // set email format to HTML
         $mail->Subject = $subject;
         $mail->Body = "<span style='font-family:Tahoma , sans-serif;line-height:25px;'>" . $body . "</span>";;
-        $mail->send();
+        // $mail->send();
         //************************************ZONE***SEND****EMAIL*************************************//
     }
 }

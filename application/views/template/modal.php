@@ -86,8 +86,9 @@
 							<label>กะงาน</label>
 							<select name="ot_timeName" id="ot_timeName" class="form-control">
 								<option value="">กรุณาเลือกกะการทำงาน</option>
-								<option value="กะเช้า">กะเช้า</option>
-								<option value="กะเย็น">กะเย็น</option>
+								<option value="กะเช้า(ก่อนเข้างาน)">กะเช้า (ก่อนเข้างาน 06.00 - 07.15น.)</option>
+								<option value="กะเช้า(หลังเลิกงาน)">กะเช้า (หลังเลิกงาน 16.15 - 19.30น.)</option>
+								<option value="กะเย็น(หลังเลิกงาน)">กะเย็น (หลังเลิกงาน 04.15 - 07.30น.)</option>
 							</select>
 						</div>
 					</div>
@@ -251,7 +252,7 @@
 				<div class="row form-group hidesection_group">
 					<div class="col-md-12">
 						<label>ผลการอนุมัติ</label>
-						<select name="dtot_result_approve_group" id="dtot_result_approve_group" class="form-control">
+						<select name="dtot_result_approve_group" id="dtot_result_approve_group" class="form-control" required>
 							<option value="">กรุณาเลือกผลการอนุมัติ</option>
 							<option value="อนุมัติ">อนุมัติ</option>
 							<option value="ไม่อนุมัติ">ไม่อนุมัติ</option>

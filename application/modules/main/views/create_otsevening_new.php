@@ -155,8 +155,9 @@
         <div class="col-md-4">
           <div class="form-group">
             <label>กะงาน</label>
-            <select readonly name="ot_emptimename" id="ot_emptimename" class="form-control">
-              <option value="กะเย็น">กะเย็น</option>
+            <select name="ot_emptimename" id="ot_emptimename" class="form-control" required>
+              <option value="">กรุณาเลือกกะการทำงาน</option>
+            <option value="กะเย็น(หลังเลิกงาน)">กะเย็น (หลังเลิกงาน 04.15 - 07.30น.)</option>
             </select>
             <span id="error_ot_emptimename" class="text-danger"></span>
           </div>
@@ -231,6 +232,35 @@
 
 <script>
   $(document).ready(function() {
+
+
+    $('.datepicker , #insert').prop('disabled', true);
+      $('input:checkbox[id="select_data"]').on('click', function() {
+        var select_data = $('input:checkbox[id="select_data"]:checked');
+        alert(select_data.length);
+        if (select_data.length < 1) {
+          $('.datepicker').prop('disabled', true);
+        } else {
+          $('.datepicker').prop('disabled', false);
+        }
+      });
+
+      $('.datepicker').on('change', function() {
+        if ($(this).val() != '') {
+          $('#insert').prop('disabled', false);
+        } else {
+          $('#insert').prop('disabled', true);
+        }
+      });
+
+
+      if ($('#checkdatarow').val() != 0) {
+        $('.datepicker').prop('disabled', false);
+      } else {
+        $('.datepicker').prop('disabled', true);
+      }
+
+
 
     var deptCode = $('#ot_empDeptCode').val();
     // loadActiveOt(deptCode);

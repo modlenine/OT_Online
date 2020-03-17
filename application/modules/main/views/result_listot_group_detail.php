@@ -29,6 +29,14 @@
 			}else if($getotlist['ot_status'] == 'ฝ่ายบุคคลรับทราบ'){
 				$colorFont = ' style="color:#008B00;" ';
 			}
+
+			if($getotlist['ot_timeName'] == "กะเช้า"){
+				$ot_timename = "กะเช้า (16.15 - 19.30น.)";
+			}else if($getotlist['ot_timeName'] == "กะเย็น"){
+				$ot_timename = "กะเย็น (04.15 - 07.30น.)";
+			}else{
+				$ot_timename = "";
+			}
 			?>
 			<tr>
                 <td></td>
@@ -45,7 +53,7 @@
 					<?= $getotlist['ot_empPosition'] ?>
 				</td>
 				<td>
-					<?= $getotlist['ot_timeName'] ?>
+					<?= $ot_timename ?>
 				</td>
 				<td>
 					<?= conDate($getotlist['ot_date_request']) ?>
